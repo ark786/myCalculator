@@ -6,6 +6,7 @@ import { render } from 'react-dom';
 
 
 export default class App extends Component {
+	console.log("Hacktober 101")
   constructor() {
     super()
     this.state = {
