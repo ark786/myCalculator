@@ -14,10 +14,13 @@ export default class App extends Component {
   }
 
   calculateResult() {
+    temp=eval(this.state.resultText)
+    if(temp=="Infinity"){
+      temp="Not possible"
+    }
     this.setState({
-      calculationText: eval(this.state.resultText)
+      calculationText: temp
     })
-    
 
     // parse this ex 3+33*6^5/2 ==>> [3,+,33,]
   }
