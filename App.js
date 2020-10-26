@@ -6,7 +6,6 @@ import { render } from 'react-dom';
 
 
 export default class App extends Component {
-	console.log("Hacktober 101")
   constructor() {
     super()
     this.state = {
@@ -72,6 +71,9 @@ export default class App extends Component {
     }
   }
 
+  wouldRenderNot=()=>{
+    console.log("what if i am not able to perform good at my job s well as my personal aspirations ? ")
+  }
 
 
 
