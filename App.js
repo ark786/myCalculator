@@ -40,11 +40,6 @@ export default class App extends Component {
   }
 
   operate(operation) {
-
-
-
-
-
     switch (operation) {
       case 'D':
         const text = this.state.resultText.split('')
@@ -69,9 +64,30 @@ export default class App extends Component {
     }
   }
 
-  wouldRenderNot=()=>{
-    console.log("what if i am not able to perform good at my job s well as my personal aspirations ? ")
-  }
+  wouldRenderNot=(operation)=>{
+
+    switch (operation) {
+      case 'D':
+        const text = this.state.resultText.split('')
+        text.pop()
+        text.join('')
+        this.setState({
+          resultText: text.join('')
+
+        })
+        break
+      case '+':
+      case '-':
+      case '/':
+      case '*':
+
+        const lastChar = this.state.resultText.split('').pop()
+        if (this.operations.indexOf(lastChar) > 0 || lastChar === '.') return
+        if (this.state.text == "") return
+        this.setState({
+          resultText: this.state.resultText + operation
+        })
+    }  }
 
 
 
